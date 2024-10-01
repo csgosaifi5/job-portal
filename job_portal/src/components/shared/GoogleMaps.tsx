@@ -5,7 +5,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 const GoogleMaps = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyBPDjB2qkV4Yxn9h0tGSk2X5uH6NKmssXw",
+    googleMapsApiKey: "",
   });
   const [map, setMap] = React.useState(null);
 
