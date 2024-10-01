@@ -1,0 +1,27 @@
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scrollBarCustom::-webkit-scrollbar {
+  background: #fff;
+  width: 2px;
+}
+
+.scrollBarCustom::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 7px #4f5d73;
+  background-color: rgb(114, 114, 114);
+}
+
+.breadcrumb-itemCustom a,
+.textDecoration-none a,
+.textDecoration-none {
+  text-decoration: none !important;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.textareaResizeNone {
+  resize: none;
+}

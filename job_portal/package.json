@@ -1,0 +1,48 @@
+{
+  "name": "job_portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3031",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@react-google-maps/api": "^2.19.3",
+    "@tinymce/tinymce-react": "^5.1.1",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "classnames": "^2.5.1",
+    "cors": "^2.8.5",
+    "date-fns": "^3.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.2",
+    "next": "14.2.4",
+    "nodemailer": "^6.9.14",
+    "query-string": "^9.0.0",
+    "react": "^18",
+    "react-cookie": "^7.1.4",
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
+    "react-select": "^5.8.0",
+    "react-slick": "^0.30.2",
+    "sequelize": "^6.37.3",
+    "sonner": "^1.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
+  }
+}

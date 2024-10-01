@@ -1,0 +1,121 @@
+import {
+  CButton,
+  CCol,
+  CModal,
+  CModalBody,
+  CModalFooter,
+  CModalHeader,
+  CModalTitle,
+  CRow,
+} from '@coreui/react'
+import moment from 'moment'
+import React from 'react'
+
+const ViewMembershipModal = ({ onClose, membData }) => {
+  return (
+    <>
+      <CModal
+        alignment="center"
+        size="lg"
+        visible={true}
+        onClose={onClose}
+        aria-labelledby="TooltipsAndPopoverExample"
+      >
+        <CModalHeader>
+          <CModalTitle id="TooltipsAndPopoverExample">New Membership Request</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CRow>
+            <CCol className={window.innerWidth < 576 ? 'col-12' : 'col-6'}>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Full Name -</h6>
+                <p className="m-0">
+                  {membData.first_name} {membData.last_name}
+                </p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Membership Name -</h6>
+                <p className="m-0">{membData.membership_name}</p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Membership Amount -</h6>
+                <p className="m-0">$ {membData.membership_amount}</p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Email Id -</h6>
+                <p className="m-0">{membData.email_id}</p>
+              </div>
+            </CCol>
+            <CCol>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Arrival Date -</h6>
+                <p className="m-0">{moment(membData.arrival_date).format('DD-MM-YYYY')}</p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Arrival Time -</h6>
+                <p className="m-0">{membData.arrival_time}</p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Phone Country -</h6>
+                <p className="m-0">{membData.phone_country}</p>
+              </div>
+              <div className="d-flex align-items-center gap-1 mb-2">
+                <h6 className="m-0">Phone Area Code -</h6>
+                <p className="m-0">{membData.phone_area_code}</p>
+              </div>
+            </CCol>
+          </CRow>
+          <hr />
+          <CRow>
+            <div className="d-flex flex-column gap-1 mb-2">
+              <h6 className="m-0">Special Requests -</h6>
+              <p className="m-0">
+                {membData.special_request ? membData.special_request : '(No Special Request)'}
+              </p>
+            </div>
+          </CRow>
+          <hr />
+          <h5 className="underline">User details :-</h5>
+          <CRow>
+            <div className="d-flex gap-1 mb-2 align-items-center">
+              <h6 className="m-0">Address -</h6>
+
+              <p className="mb-0">{membData.address_line_1}</p>
+              <p className="mb-0">{membData.address_line_2}</p>
+            </div>
+          </CRow>
+          <CRow>
+            <CCol className={'mb-2 ' + (window.innerWidth < 576 ? 'col-6' : 'col-4')}>
+              <div className="d-flex gap-1 mb-2 align-items-center">
+                <h6 className="m-0">State -</h6>
+
+                <p className="mb-0">{membData.state}</p>
+              </div>
+            </CCol>
+            <CCol className={'mb-2 ' + (window.innerWidth < 576 ? 'col-6' : 'col-4')}>
+              <div className="d-flex gap-1 mb-2 align-items-center">
+                <h6 className="m-0">City -</h6>
+
+                <p className="mb-0">{membData.city}</p>
+              </div>
+            </CCol>
+            <CCol>
+              <div className="d-flex gap-1 mb-2 align-items-center">
+                <h6 className="m-0">Zip -</h6>
+
+                <p className="mb-0">{membData.zip}</p>
+              </div>
+            </CCol>
+          </CRow>
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={onClose}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+    </>
+  )
+}
+
+export default ViewMembershipModal
